@@ -23,13 +23,12 @@ const engage = (key) => {
   }
 
   if (receiver.toString() === sender.toString()) {
-    let answer = prompt(" ");
-    document.getElementById("status").innerText = answer
-      ? `Your answer: ${answer}`
-      : "No answer provided.";
-    receiver.length = 0;
-    index = 0;
-    window.location = "pages/fiction.html";
+    let answer = prompt("Em que fogo o Nunes Filho queimou a rosca?");
+    if (answer && answer.toLowerCase() === "fogo do amor") {
+      window.location = "fiction.html";
+    } else {
+      alert("You are not worthy");
+    }
   }
 };
 
